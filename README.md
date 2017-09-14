@@ -1,6 +1,7 @@
 # vue-typespeed
 
-> A Vue.js project
+> Simple Typespeed game made with Vue.js 
+> https://www.youtube.com/watch?v=ENF_q-rRrcU
 
 ## Build Setup
 
