@@ -6,6 +6,7 @@
 </template>
 <style>
     div.word {
+        color: red;
         position: absolute;
         top: 0px;
         left: 0px;

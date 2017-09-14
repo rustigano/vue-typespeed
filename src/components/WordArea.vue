@@ -13,6 +13,7 @@
         /* width: 100%; */
         height: 300px;
         position: relative;
+        background-color: black;
         border: solid 1px red;
     }
 </style>
@@ -25,7 +26,7 @@
     components: {Word},
     data () {
       return {
-        dictionary: ['apekool', 'koekebakker', 'flierefluiter', 'appelflap', 'gans', 'hoi', 'kanarie', 'kabouter', 'stoeptegel'],
+        dictionary: ['er', 'was', 'eens', 'een', 'meisje', 'met', 'de', 'naam', 'Roodkapje', 'grote', 'boze', 'wolf', 'sprookje', 'bos', 'grootmoeder', 'apekool', 'koekebakker', 'flierefluiter', 'appelflap', 'gans', 'hoi', 'kanarie', 'kabouter', 'stoeptegel'],
         loopTimeout: 0,
         updateInterval: 500,
         createNewWordWhen: 0
