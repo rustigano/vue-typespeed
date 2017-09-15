@@ -15,8 +15,9 @@ const getters = {
     /* console.log('getword', index) */
     return state.wordsOnScreen[index]
   },
-  getWordIndex: (state) => (word) => {
-    return state.wordsOnScreen.findIndex(word => word.word)
+  getWordIndex: (state) => (w) => {
+    if (state.wordsOnScreen.length === 0) return -1
+    return state.wordsOnScreen.findIndex(word => word.word === w)
   },
   getGameScreenWidth (state) {
     return state.gameScreenWidth
