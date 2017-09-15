@@ -69,6 +69,7 @@
         this.$store.dispatch('resetWords')
         this.$store.dispatch('setScore', 0)
         this.$store.dispatch('resetLives')
+        this.$store.dispatch('resetMisses')
         this.$store.dispatch('setState', 'welcome')
       },
       startGame: function (event) {
