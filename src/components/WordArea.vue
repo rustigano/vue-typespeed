@@ -58,8 +58,12 @@
       wordFactory: function (word) {
         let y = this.words.length * 15
         let speed = Math.ceil(Math.random() * 50) + 5
-        let score = Math.floor((word.speed * word.length))
+        let score = this.getWordScore(speed, word.length)
+        // console.log(score)
         return {'x': 0, 'y': y, 'speed': speed, 'word': word, 'score': score}
+      },
+      getWordScore: function (s, l) {
+        return Math.floor((s * l))
       },
       generateWord: function () {
         let randomWordIndex = parseInt(Math.random() * this.dictionary.length)

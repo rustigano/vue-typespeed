@@ -41,10 +41,8 @@
         if (this.typedWord !== '') {
           let i = this.$store.getters.getWordIndex(this.typedWord)
           if (i > -1) {
-            let word = this.$store.getters.getWordByIndex(i)
-            let w = this.$store.getters.gameScreenWidth
-            let score = word.score * (100 - (word.x / w / 100)) / 100
-            this.$store.dispatch('addToScore', score)
+            let points = this.getScore(i)
+            this.$store.dispatch('addToScore', points)
             this.$store.dispatch('removeWordByIndex', i)
           } else {
             this.$store.dispatch('addMiss')
@@ -52,6 +50,18 @@
           }
           this.typedWord = ''
         }
+      },
+      getScore: function (i) {
+        let word = this.$store.getters.getWordByIndex(i)
+        let sw = this.$store.getters.getGameScreenWidth
+        let x = word.x
+        // console.log(sw, x)
+        if (x > sw) x = sw
+        let percent = x / (sw / 100)
+        if (percent === 100) percent = 99
+        let points = Math.ceil((word.score * (100 - percent)) / 100)
+        // console.log(points)
+        return points
       }
 
     }
