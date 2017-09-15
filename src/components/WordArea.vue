@@ -3,7 +3,6 @@
         <word v-for="word in words"
               v-bind:key="word.word"
               :word="word">
-
         </word>
     </div>
 </template>
@@ -65,8 +64,7 @@
       },
       generateWord: function () {
         let randomWordIndex = parseInt(Math.random() * this.dictionary.length)
-        let generatedWord = this.dictionary[randomWordIndex]
-        return generatedWord
+        return this.dictionary[randomWordIndex]
       },
       isWordOnScreen: function (w) {
         return (this.words.findIndex(word => word.word === w) > -1)

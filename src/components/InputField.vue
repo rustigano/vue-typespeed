@@ -1,6 +1,7 @@
 <template>
-    <input
+    <input  ref="wordInputField"
             v-model="typedWord"
+            :disabled="inputDisabled"
             @keyup.enter="submitWord"
             placeholder="type here">
 </template>
@@ -10,13 +11,30 @@
     name: 'inputField',
     data () {
       return {
-        typedWord: ''
+        typedWord: '',
+        inputDisabled: true
+      }
+    },
+    computed: {
+      gameState: function () {
+        return this.$store.getters.getState
+      }
+    },
+    watch: {
+      gameState: function (gameStateIn) {
+        if (gameStateIn === 'running') {
+          // console.log('maak woorden en update', this.loopTimeout)
+          this.inputDisabled = false
+          this.$nextTick(() => {
+            this.$refs.wordInputField.focus()
+          })
+        } else {
+          // console.log('stop met woorden maken en updaten')
+          this.inputDisabled = true
+        }
       }
     },
     methods: {
-      wordOnScreenIndex: function (w) {
-        return this.wordsOnScreen.findIndex(word => word.word === w)
-      },
       submitWord: function () {
         // console.log(this.typedWord)
         let i = this.$store.getters.getWordIndex(this.typedWord)
