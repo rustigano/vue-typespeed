@@ -1,6 +1,6 @@
 const state = {
-  maxLives: 3,
-  lives: 3
+  maxLives: 5,
+  lives: 5
 }
 
 const getters = {

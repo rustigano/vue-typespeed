@@ -1,11 +1,16 @@
 <template>
-    <input  ref="wordInputField"
+    <p>&gt;<input  ref="wordInputField"
             v-model="typedWord"
             :disabled="inputDisabled"
             @keyup.enter="submitWord"
             placeholder="type here">
+    &lt;</p>
 </template>
-
+<style scoped>
+    p {
+        color: purple;
+    }
+</style>
 <script>
   export default {
     name: 'inputField',

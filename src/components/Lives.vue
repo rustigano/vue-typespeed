@@ -1,17 +1,17 @@
 <template>
-    <div id="lives">
         <transition-group name="list" tag="p">
             <span v-for="smiley in smileys"
                   v-bind:key="smiley"
                   class="list-item">{{ smiley }}</span>
         </transition-group>
-    </div>
 </template>
 
-<style>
+<style scoped>
     #lives {
-        border: solid 1px green;
-        display: flex;
+        /*border: solid 1px green;*/
+        /*align-items: flex-start;*/
+        /*display: flex;*/
+/*        margin-right: 10px;*/
     }
 
 /*    .life {
@@ -22,23 +22,27 @@
     }*/
 
     .list-item {
-        background-color: black;
-        color: yellow;
-        padding-left: 2px;
-        padding-right: 2px;
-
+        background-color: yellow;
+        color: black;
+        margin-left: 2px;
+        margin-right: 3px;
+        padding: 3px;
         display: inline-block;
-        margin-right: 10px;
     }
 
     .list-enter-active, .list-leave-active {
-        transition: all 1s;
+        transition: all 2s;
     }
 
-    .list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */
+    .list-enter /* .list-leave-active below version 2.1.8 */
     {
         opacity: 0;
         transform: translateY(30px);
+    }
+    .list-leave-to /* .list-leave-active below version 2.1.8 */
+    {
+        opacity: 0;
+        transform: translateY(-30px);
     }
 
 </style>

@@ -1,12 +1,15 @@
 <template>
-    <div id="misses">
-        Misses: {{ missed }}
-    </div>
+    <p>
+        Misses: <span>{{ missed }}</span>
+    </p>
 </template>
 
-<style>
-    #misses {
-        border: solid 1px blue;
+<style scoped>
+    p {
+        color: white;
+    }
+    span {
+        color: deepskyblue;
     }
 </style>
 

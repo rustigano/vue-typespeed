@@ -36,6 +36,7 @@
         border-top: 1px solid purple;
         display: flex;
         justify-content: space-around;
+        align-items: flex-start;
     }
     #overlay {
         background-color: white;

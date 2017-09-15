@@ -1,12 +1,15 @@
 <template>
-    <div id="score">
-       Score: {{ points }}
-    </div>
+    <p>
+        Score: <span>{{ points }}</span>
+    </p>
 </template>
 
-<style>
-    #score {
-        border: solid 1px orange;
+<style scoped>
+    p {
+        color: white;
+    }
+    span {
+        color: deepskyblue;
     }
 </style>
 
