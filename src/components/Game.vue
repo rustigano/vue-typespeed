@@ -4,6 +4,7 @@
         <div id="interface">
             <input-field></input-field>
             <score></score>
+            <misses></misses>
             <lives></lives>
         </div>
         <div id="overlay">
@@ -40,10 +41,16 @@
   import InputField from '../components/InputField'
   import Score from '../components/Score.vue'
   import Lives from '../components/Lives.vue'
+  import Misses from './Misses'
 
   export default {
     name: 'game',
-    components: {WordArea, InputField, Score, Lives},
+    components: {
+      WordArea,
+      InputField,
+      Score,
+      Lives,
+      Misses},
     data () {
       return {
         state: 'welcome' /* welcome running paused finished */

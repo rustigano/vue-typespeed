@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 import game from './modules/game'
 import lives from './modules/lives'
 import score from './modules/score'
+import misses from './modules/misses'
 
 Vue.use(Vuex)
 
@@ -23,7 +24,8 @@ const store = new Vuex.Store({
   modules: {
     game,
     lives,
-    score
+    score,
+    misses
   },
   strict: debug
 })

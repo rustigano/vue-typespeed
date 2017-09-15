@@ -36,20 +36,18 @@
     },
     methods: {
       submitWord: function () {
-        // console.log(this.typedWord)
         let i = this.$store.getters.getWordIndex(this.typedWord)
-
         if (i > -1) {
           let word = this.$store.getters.getWordByIndex(i)
 
           let score = Math.floor((word.speed * word.word.length) / 5)
           this.$store.dispatch('addToScore', score)
           this.$store.dispatch('removeWordByIndex', i)
-          this.typedWord = ''
-          // console.log('woord goed')
         } else {
-          console.log('hmm...')
+          this.$store.dispatch('addMiss')
+          // console.log('hmm...')
         }
+        this.typedWord = ''
       }
 
     }
