@@ -9,11 +9,9 @@
 
 <style>
     #word-area {
-        /* width: 100%; */
         height: 300px;
         position: relative;
-        background-color: black;
-        border: solid 1px red;
+        overflow-x: hidden;
     }
 </style>
 
@@ -60,7 +58,8 @@
       wordFactory: function (word) {
         let y = this.words.length * 15
         let speed = Math.ceil(Math.random() * 50) + 5
-        return {'x': 0, 'y': y, 'speed': speed, 'word': word}
+        let score = Math.floor((word.speed * word.length))
+        return {'x': 0, 'y': y, 'speed': speed, 'word': word, 'score': score}
       },
       generateWord: function () {
         let randomWordIndex = parseInt(Math.random() * this.dictionary.length)

@@ -42,8 +42,8 @@
           let i = this.$store.getters.getWordIndex(this.typedWord)
           if (i > -1) {
             let word = this.$store.getters.getWordByIndex(i)
-
-            let score = Math.floor((word.speed * word.word.length) / 5)
+            let w = this.$store.getters.gameScreenWidth
+            let score = word.score * (100 - (word.x / w / 100)) / 100
             this.$store.dispatch('addToScore', score)
             this.$store.dispatch('removeWordByIndex', i)
           } else {

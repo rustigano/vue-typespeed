@@ -29,11 +29,16 @@
     #game {
         width: 100%;
         height: 100vh;
-        border: solid 1px black;
+        background-color: black;
+        /*border: solid 1px black;*/
     }
     #interface {
+        border-top: 1px solid purple;
         display: flex;
         justify-content: space-around;
+    }
+    #overlay {
+        background-color: white;
     }
 </style>
 <script>
