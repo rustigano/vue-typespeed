@@ -68,7 +68,6 @@
         // console.log(points)
         return points
       }
-
     }
   }
 </script>
