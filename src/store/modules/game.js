@@ -4,7 +4,7 @@ const state = {
   gameScreenWidth: 0
 }
 
-const getters = {
+export const getters = {
   getState (state) {
     return state.playState
   },
