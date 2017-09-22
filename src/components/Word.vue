@@ -18,10 +18,10 @@
     props: ['word'],
     computed: {
       wordColor: function () {
-        let w = this.$store.getters.getGameScreenWidth
-        if (this.word.x < w / 2) {
+        const sw = this.$store.getters.getGameScreenWidth
+        if (this.word.x < sw / 2) {
           return 'lawngreen'
-        } else if (this.word.x < w * 0.75) {
+        } else if (this.word.x < sw * 0.75) {
           return 'yellow'
         } else {
           return 'red'

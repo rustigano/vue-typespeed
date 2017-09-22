@@ -16,7 +16,7 @@ const mutations = {
   }
 }
 const actions = {
-  resetMisses (context, value) {
+  resetMisses (context) {
     context.commit('resetMisses')
   },
   addMiss (context) {

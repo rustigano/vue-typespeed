@@ -10,7 +10,7 @@ Vue.use(Vuex)
 
 const state = {}
 const getters = {}
-export const mutations = {}
+const mutations = {}
 
 const actions = {}
 

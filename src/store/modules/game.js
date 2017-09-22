@@ -11,11 +11,10 @@ export const getters = {
   getWordsOnScreen (state) {
     return state.wordsOnScreen
   },
-  getWordByIndex: (state) => (index) => {
-    /* console.log('getword', index) */
+  getWordByIndex (state, index) {
     return state.wordsOnScreen[index]
   },
-  getWordIndex: (state) => (w) => {
+  getWordIndex (state, w) {
     if (state.wordsOnScreen.length === 0) return -1
     return state.wordsOnScreen.findIndex(word => word.word === w)
   },

@@ -59,7 +59,6 @@
         let y = this.words.length * 15
         let speed = Math.ceil(Math.random() * 50) + 5
         let score = this.getWordScore(speed, word.length)
-        // console.log(score)
         return {'x': 0, 'y': y, 'speed': speed, 'word': word, 'score': score}
       },
       getWordScore: function (s, l) {

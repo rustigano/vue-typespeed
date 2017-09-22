@@ -32,7 +32,7 @@ describe('advanceWordsOnScreen', () => {
       }]
     }
     advanceWordsOnScreen(state)
-    expect(state.wordsOnScreen[0]).to.eql({'x': 10, 'speed': 10, 'word': 'Monkey'})
-    expect(state.wordsOnScreen[1]).to.eql({'x': 50, 'speed': 50, 'word': 'Horse'})
+    expect(state.wordsOnScreen[0]).to.deep.equal({'x': 10, 'speed': 10, 'word': 'Monkey'})
+    expect(state.wordsOnScreen[1]).to.deep.equal({'x': 50, 'speed': 50, 'word': 'Horse'})
   })
 })
