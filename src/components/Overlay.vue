@@ -40,7 +40,6 @@
     name: 'overlay',
     computed: {
       gameState: function () {
-        console.log(this.$store)
         return this.$store.getters.getState
       },
       score: function () {

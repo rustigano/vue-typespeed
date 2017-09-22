@@ -4,7 +4,7 @@
         {{ word.word }}
     </div>
 </template>
-<style>
+<style scoped>
     div.word {
         position: absolute;
         color: lawngreen;
@@ -20,7 +20,7 @@
       wordColor: function () {
         const sw = this.$store.getters.getGameScreenWidth
         if (this.word.x < sw / 2) {
-          return 'lawngreen'
+          return '#7CFC00'
         } else if (this.word.x < sw * 0.75) {
           return 'yellow'
         } else {

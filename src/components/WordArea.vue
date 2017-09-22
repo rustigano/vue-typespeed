@@ -40,11 +40,11 @@
     watch: {
       gameState: function (gameStateIn) {
         if (gameStateIn === 'running') {
-          // console.log('maak woorden en update', this.loopTimeout)
+          // maak woorden en update
           if (this.loopTimeout === 0) this.doLoop()
           this.createNewWordWhen = Date.now() + 3000
         } else {
-          // console.log('stop met woorden maken en updaten')
+          // stop met woorden maken en updaten
           if (this.loopTimeout !== 0) this.stopLoop()
         }
       }

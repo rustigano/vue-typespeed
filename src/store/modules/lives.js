@@ -14,7 +14,6 @@ const mutations = {
   },
   die (state) {
     state.lives--
-    // console.log('die')
   }
 }
 const actions = {

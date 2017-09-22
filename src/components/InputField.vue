@@ -28,7 +28,6 @@
     watch: {
       gameState: function (gameStateIn) {
         if (gameStateIn === 'running') {
-          // console.log('maak woorden en update', this.loopTimeout)
           this.typedWord = ''
           this.inputDisabled = false
           this.$nextTick(() => {
@@ -36,7 +35,6 @@
           })
         } else {
           this.typedWord = ''
-          // console.log('stop met woorden maken en updaten')
           this.inputDisabled = true
         }
       }
@@ -44,7 +42,7 @@
     methods: {
       submitWord: function () {
         if (this.typedWord !== '') {
-          let i = this.$store.getters.getWordIndex(this.typedWord)
+          let i = this.getWordIndex(this.typedWord)
           if (i > -1) {
             let points = this.getScore(i)
             this.$store.dispatch('addToScore', points)
@@ -55,6 +53,11 @@
           }
           this.typedWord = ''
         }
+      },
+      getWordIndex: function (w) {
+        const words = this.$store.getters.getWordsOnScreen
+        if (words.length === 0) return -1
+        return words.findIndex(word => word.word === w)
       },
       getScore: function (i) {
         let word = this.$store.getters.getWordByIndex(i)
