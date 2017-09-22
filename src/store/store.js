@@ -10,13 +10,13 @@ Vue.use(Vuex)
 
 const state = {}
 const getters = {}
-const mutations = {}
+export const mutations = {}
 
 const actions = {}
 
 const debug = process.env.NODE_ENV !== 'production'
 
-const store = new Vuex.Store({
+export default new Vuex.Store({
   state,
   getters,
   mutations,
@@ -29,4 +29,3 @@ const store = new Vuex.Store({
   },
   strict: debug
 })
-export default store

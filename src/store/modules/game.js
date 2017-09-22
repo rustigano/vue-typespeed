@@ -23,7 +23,7 @@ const getters = {
     return state.gameScreenWidth
   }
 }
-const mutations = {
+export const mutations = {
   setState (state, value) {
     state.playState = value
   },
