@@ -1,7 +1,7 @@
 {
   "name": "vue-typespeed",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "Simple Typespeed game made with Vue.js and Vuex unit tested with mocha",
   "author": "Tobias Beuving <informatiebureau@ehhh.nl>",
   "private": true,
   "scripts": {
