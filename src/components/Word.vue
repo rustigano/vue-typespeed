@@ -1,6 +1,6 @@
 <template>
     <div class="word"
-         v-bind:style="{ top: word.y + 'px', left: word.x + 'px', color: wordColor }">
+         v-bind:style="{ top: word.y + 'px', left: word.x + 'px', color: wordColor}">
         {{ word.word }}
     </div>
 </template>
@@ -20,7 +20,7 @@
       wordColor: function () {
         const sw = this.$store.getters.getGameScreenWidth
         if (this.word.x < sw / 2) {
-          return '#7CFC00'
+          return 'lawngreen'
         } else if (this.word.x < sw * 0.75) {
           return 'yellow'
         } else {

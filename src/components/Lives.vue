@@ -7,19 +7,6 @@
 </template>
 
 <style scoped>
-    #lives {
-        /*border: solid 1px green;*/
-        /*align-items: flex-start;*/
-        /*display: flex;*/
-/*        margin-right: 10px;*/
-    }
-
-/*    .life {
-        background-color: black;
-        color: yellow;
-        padding-left: 2px;
-        padding-right: 2px;
-    }*/
 
     .list-item {
         background-color: yellow;
