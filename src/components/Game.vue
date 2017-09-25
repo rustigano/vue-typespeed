@@ -2,6 +2,7 @@
     <div id="game">
 
         <word-area></word-area>
+        <PauseBar></PauseBar>
         <div id="interface">
             <input-field></input-field>
             <score></score>
@@ -18,6 +19,7 @@
         height: 100vh;
         background-color: black;
     }
+
     #interface {
         border-top: 1px solid purple;
         display: flex;
@@ -28,6 +30,7 @@
 <script>
   import Overlay from '../components/Overlay'
   import WordArea from '../components/WordArea'
+  import PauseBar from '../components/PauseBar'
   import InputField from '../components/InputField'
   import Score from '../components/Score'
   import Lives from '../components/Lives'
@@ -38,6 +41,7 @@
     components: {
       Overlay,
       WordArea,
+      PauseBar,
       InputField,
       Score,
       Lives,

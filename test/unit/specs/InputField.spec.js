@@ -31,6 +31,6 @@ describe('InputField.vue', () => {
     //  const wordItem = WAvm.wordFactory('Monkey')
     //  expect(wordItem).to.be.a('object')
     const index = vm.getWordIndex('Monkey')
-    expect(index).to.be.equal(2)
+    expect(index).to.equal(2)
   })
 })
