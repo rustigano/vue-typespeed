@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import store from '@/store/store'
 import PauseBar from '@/components/PauseBar'
-// @todo check if storing the state is still necessary
+/** @todo check if storing the state is still necessary
 if (typeof Object.assign !== 'function') {
   Object.assign = function (target) {
     'use strict'
@@ -30,7 +30,7 @@ function deepClone (obj) {
 }
 
 const initialState = deepClone(store.state)
-
+**/
 describe('PauseBar.vue (welcome state)', () => {
   let vm
   beforeEach(function () {
@@ -39,10 +39,9 @@ describe('PauseBar.vue (welcome state)', () => {
       store: store
     }).$mount()
   })
-  afterEach(() => {
+/*  afterEach(() => {
     store.replaceState(initialState)
-  })
-
+  })  */
   it('should have a pause method', () => {
     expect(vm.pauseGame).to.be.a('function')
   })
