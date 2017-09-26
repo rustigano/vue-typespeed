@@ -8,12 +8,7 @@ describe('getWordIndex', () => {
     const state = {
       wordsOnScreen: [{'word': 'Monkey'}, {'word': 'Horse'}, {'word': 'Snail'}]
     }
-
     expect(state.wordsOnScreen.length).to.equal(3)
-    console.log('Henk')
-    const a = getWordIndex
-
-    console.log(a.call(state, 'Horse'))
   })
 })
 */

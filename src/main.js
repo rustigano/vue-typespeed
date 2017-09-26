@@ -2,7 +2,6 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import Vuex from 'vuex'
-// import App from './App'
 import store from './store/store'
 import Game from './components/Game'
 
@@ -12,7 +11,7 @@ Vue.config.productionTip = false
 Vue.use(Vuex)
 
 /* eslint-disable no-new */
-new Vue({
+window.vue = new Vue({
   el: '#app',
   store,
   template: '<div id="app"><game></game></div>',
