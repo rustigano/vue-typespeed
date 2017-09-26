@@ -1,5 +1,5 @@
 /**
-  playState can be: welcome, running, paused, or finished
+  * playState can be: welcome, running, paused, or finished
 **/
 const state = {
   playState: 'welcome',
