@@ -1,10 +1,10 @@
 <template>
-    <p>&gt;<input  ref="wordInputField"
-            v-model="typedWord"
-            :disabled="inputDisabled"
-            @keyup.enter="submitWord"
-            placeholder="type here">
-    &lt;</p>
+    <p>&gt;<input ref="wordInputField"
+                  v-model="typedWord"
+                  :disabled="inputDisabled"
+                  @keyup.enter="submitWord"
+                  placeholder="type here">
+        &lt;</p>
 </template>
 <style scoped>
     p {
@@ -63,7 +63,6 @@
         let word = this.$store.getters.getWordByIndex(i)
         let sw = this.$store.getters.getGameScreenWidth
         let x = word.x
-        // console.log(sw, x)
         if (x > sw) x = sw
         let percent = x / (sw / 100)
         if (percent === 100) percent = 99

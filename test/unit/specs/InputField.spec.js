@@ -4,21 +4,17 @@ import InputField from '@/components/InputField.vue'
 import WordArea from '@/components/WordArea.vue'
 
 describe('InputField.vue', () => {
-  it('should have a getWordIndex method', () => {
+  let vm
+  beforeEach(function () {
     const Component = Vue.extend(InputField)
-    const vm = new Component({
+    vm = new Component({
       store: store
     }).$mount()
+  })
+  it('should have a getWordIndex method', () => {
     expect(vm.getWordIndex).to.be.a('function')
   })
-  it('should return the index of a word with getWordIndex method', () => {
-    const Component = Vue.extend(InputField)
-    const vm = new Component({
-      store: store
-    }).$mount()
-
-    // store.getters.getWordsOnScreen
-
+  it('should return the correct index of a word with getWordIndex method', () => {
     const WAComponent = Vue.extend(WordArea)
     const WAvm = new WAComponent({
       store: store
@@ -28,9 +24,7 @@ describe('InputField.vue', () => {
     WAvm.addNewWordToScreen('Toad')
     WAvm.addNewWordToScreen('Monkey')
     WAvm.addNewWordToScreen('Snail')
-    //  const wordItem = WAvm.wordFactory('Monkey')
-    //  expect(wordItem).to.be.a('object')
     const index = vm.getWordIndex('Monkey')
-    expect(index).to.be.equal(2)
+    expect(index).to.equal(2)
   })
 })

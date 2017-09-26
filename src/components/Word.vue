@@ -1,6 +1,6 @@
 <template>
     <div class="word"
-         v-bind:style="{ top: word.y + 'px', left: word.x + 'px', color: wordColor }">
+         v-bind:style="{ top: word.y + 'px', left: word.x + 'px', color: wordColor}">
         {{ word.word }}
     </div>
 </template>
@@ -15,13 +15,20 @@
 <script>
   export default {
     name: 'word',
+    data: function () {
+      return {
+        sw: 0
+      }
+    },
     props: ['word'],
+    mounted () {
+      this.sw = this.$store.getters.getGameScreenWidth
+    },
     computed: {
       wordColor: function () {
-        const sw = this.$store.getters.getGameScreenWidth
-        if (this.word.x < sw / 2) {
-          return '#7CFC00'
-        } else if (this.word.x < sw * 0.75) {
+        if (this.word.x < this.sw / 2) {
+          return 'lawngreen'
+        } else if (this.word.x < this.sw * 0.75) {
           return 'yellow'
         } else {
           return 'red'

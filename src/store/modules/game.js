@@ -1,5 +1,5 @@
 const state = {
-  playState: 'welcome' /* running / ended */,
+  playState: 'welcome' /* running / paused / finished */,
   wordsOnScreen: [],
   gameScreenWidth: 0
 }
@@ -11,22 +11,9 @@ export const getters = {
   getWordsOnScreen (state) {
     return state.wordsOnScreen
   },
-  /*  getWordByIndex (state, index) {
-   console.log(index)
-   return state.wordsOnScreen[index]
-   }, */
   getWordByIndex: (state, getters) => (index) => {
     return state.wordsOnScreen[index]
   },
-  /*  getWordIndex (state, w) {
-   if (state.wordsOnScreen.length === 0) return -1
-   return state.wordsOnScreen.findIndex(word => word.word === w)
-   },
-   getWordIndex: (state, getters) => (w) => {
-   if (state.wordsOnScreen.length === 0) return -1
-   const i = state.wordsOnScreen.findIndex(word => word.word === w)
-   return i
-   },  */
   getGameScreenWidth (state) {
     return state.gameScreenWidth
   }
