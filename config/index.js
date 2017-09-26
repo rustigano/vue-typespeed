@@ -23,7 +23,7 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 8080,
+    port: 8081,  // Was 8080 maar conflict met jenkins
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
