@@ -1,15 +1,14 @@
 <template>
     <div id="game">
-
         <word-area></word-area>
-        <PauseBar></PauseBar>
+        <pause-bar></pause-bar>
         <div id="interface">
             <input-field></input-field>
             <score></score>
             <misses></misses>
             <lives></lives>
         </div>
-        <Overlay></Overlay>
+        <overlay></overlay>
 
     </div>
 </template>
