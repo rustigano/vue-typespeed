@@ -23,12 +23,10 @@ if (typeof Object.assign !== 'function') {
     return target
   }
 }
-
 function deepClone (obj) {
   let cloned = Object.assign({}, obj) //  new {a:1, b:2, c:3};
   return cloned
 }
-
 const initialState = deepClone(store.state)
 **/
 describe('PauseBar.vue (welcome state)', () => {
