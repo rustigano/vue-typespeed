@@ -1,7 +1,7 @@
 {
   "name": "vue-typespeed",
   "version": "1.0.1",
-  "description": "Simple Typespeed game made with Vue.js and Vuex unit tested with mocha",
+  "description": "Simple Typespeed game made with Vue.js and Vuex unit tested with karma mocha chai and nightwatch",
   "author": "Tobias Beuving <informatiebureau@ehhh.nl>",
   "private": true,
   "scripts": {
@@ -19,7 +19,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
-    "avoriaz": "^4.2.0",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^7.1.1",
