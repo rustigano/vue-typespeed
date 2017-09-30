@@ -14,6 +14,6 @@ Vue.use(Vuex)
 window.vue = new Vue({
   el: '#app',
   store,
-  template: '<div id="app"><game></game></div>',
+  template: '<game></game>',
   components: {Game}
 })
