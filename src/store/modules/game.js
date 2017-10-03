@@ -1,5 +1,8 @@
+/**
+  * playState can be one of the following: welcome, running, paused, or finished
+**/
 const state = {
-  playState: 'welcome' /* running / paused / finished */,
+  playState: 'welcome',
   wordsOnScreen: [],
   gameScreenWidth: 0
 }

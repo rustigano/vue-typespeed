@@ -4,6 +4,8 @@
 
 Loosely (eh ahem) after this example: https://www.youtube.com/watch?v=ENF_q-rRrcU
 
+[![CircleCI](https://circleci.com/gh/tobiasbeuving/vue-typespeed/tree/develop.svg?style=svg&circle-token=f87a59b527e98402483c2f9e7c62fcb039079b23)](https://circleci.com/gh/tobiasbeuving/vue-typespeed/tree/develop)
+
 ## Build Setup
 
 ``` bash

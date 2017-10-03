@@ -14,6 +14,13 @@ describe('InputField.vue', () => {
   it('should have a getWordIndex method', () => {
     expect(vm.getWordIndex).to.be.a('function')
   })
+  it('should have a submitWord method', () => {
+    expect(vm.submitWord).to.be.a('function')
+  })
+  it('should have a getScore method', () => {
+    expect(vm.getScore).to.be.a('function')
+  })
+
   it('should return the correct index of a word with getWordIndex method', () => {
     const WAComponent = Vue.extend(WordArea)
     const WAvm = new WAComponent({
